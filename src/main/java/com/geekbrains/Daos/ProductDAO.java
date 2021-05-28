@@ -1,5 +1,6 @@
-package com.geekbrains;
+package com.geekbrains.Daos;
 
+import com.geekbrains.Entitys.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

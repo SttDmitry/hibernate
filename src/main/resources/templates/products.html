@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th>Артикул</th>
+        <th>Название товара</th>
+        <th>Цена</th>
+    </tr>
+    </thead>
+
+    <tr class="responsive-row" th:each="product : ${productsList}">
+        <td th:text="${product.id}"/>
+        <td th:text="${product.title}"/>
+        <td th:text="${product.price}"/>
+    </tr>
+</table>
+<label>Product with max price:</label><td th:text="${maxPriced}" />
+<br>
+<label>Product with min price:</label><td th:text="${lowPriced}" />
+<br>
+<label>Product with max/min price:</label><td th:text="${maxPriced}"/><td  th:text="${lowPriced}"/>
+</body>
+</html>
